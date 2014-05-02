@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/springcfx/!svn/ver/215/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views
+END
+registration.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/springcfx/!svn/ver/215/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/registration.jsp
+END
+loginsuccess.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/springcfx/!svn/ver/209/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/loginsuccess.jsp
+END
+chart.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/springcfx/!svn/ver/213/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/chart.jsp
+END
+editprofile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/springcfx/!svn/ver/209/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/editprofile.jsp
+END
+home.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/springcfx/!svn/ver/205/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/home.jsp
+END
+change.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/springcfx/!svn/ver/205/trunk/stock-investor-portfolio-app/src/main/webapp/WEB-INF/views/change.jsp
+END

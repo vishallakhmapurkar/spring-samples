@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/springcfx/!svn/ver/207/trunk/stock-investor-portfolio-app/src/main/java/com/impetus/stockapp/mailutil
+END
+MailService.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/springcfx/!svn/ver/286/trunk/stock-investor-portfolio-app/src/main/java/com/impetus/stockapp/mailutil/MailService.java
+END
+MailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/springcfx/!svn/ver/286/trunk/stock-investor-portfolio-app/src/main/java/com/impetus/stockapp/mailutil/MailServiceImpl.java
+END
+HexStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/springcfx/!svn/ver/286/trunk/stock-investor-portfolio-app/src/main/java/com/impetus/stockapp/mailutil/HexStringConverter.java
+END

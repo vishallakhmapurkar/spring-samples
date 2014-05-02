@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xsi:schemaLocation="http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder
+		location="classpath:Db.properties,classpath:mail.properties,classpath:app.properties" />
+<context:annotation-config/>
+<context:component-scan base-package="com.vishal.stockmongodemo"/>
+	<!-- <import resource="classpath:schedule-beans.xml" /> -->
+	<!-- BoneCP configuration -->
+	<!-- <bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
+		destroy-method="close" scope="singleton">
+		<property name="driverClass" value="${db.driver}" />
+		<property name="jdbcUrl" value="${db.url}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+		<property name="maxConnectionsPerPartition" value="${max.connection.perpartition}" />
+		<property name="minConnectionsPerPartition" value="${min.connection.perpartition}" />
+		<property name="partitionCount" value="${partitionCount}" />
+		<property name="acquireIncrement" value="${aquirmentIncr}" />
+		<property name="statementsCacheSize" value="${statementsCacheSize}" />
+		<property name="releaseHelperThreads" value="${releaseHelperThreads}" />
+	
+		<property name="queryExecuteTimeLimitInMs" value="${queryExecuteTimeLimitInMs}" />
+		<property name="maxConnectionAgeInSeconds" value="${maxConnectionAgeInSeconds}" />
+	</bean> -->
+<!-- Factory bean that creates the Mongo instance -->
+    <bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
+        <property name="host" value="localhost" />
+    </bean>
+     <bean id="usercredential" class="org.springframework.data.authentication.UserCredentials" >
+      <constructor-arg name="username" ref="vlakhma" />
+        <constructor-arg name="password" ref="vlakhma" />
+     </bean>
+    <!-- MongoTemplate for connecting and quering the documents in the database -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongo" ref="mongo" />
+        <constructor-arg name="databaseName" value="stockdb" />
+         <constructor-arg name="userCredentials" value="usercredential" />
+    </bean>
+
+<mongo:repositories base-package="com.vishal.stockmongodemo.repository" mongo-template-ref="mongoTemplate" />
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	
+	
+
+	<bean id="mailService" class="com.vishal.stockmongodemo.mailutil.MailServiceImpl" p:host="${mail.host}" p:port="${mail.port}" p:username="${mail.user}" p:password="${mail.password}"/>
+	<bean id="conf" class="com.vishal.stockmongodemo.config.AppConfig"
+		p:webServicePath="${stockUrl}" />
+</beans>

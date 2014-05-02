@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/springcfx/!svn/ver/221/trunk/stock-investor-portfolio-app/src/test/resources
+END
+app.properties
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/springcfx/!svn/ver/189/trunk/stock-investor-portfolio-app/src/test/resources/app.properties
+END
+Db.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/springcfx/!svn/ver/214/trunk/stock-investor-portfolio-app/src/test/resources/Db.properties
+END
+log4j.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/springcfx/!svn/ver/221/trunk/stock-investor-portfolio-app/src/test/resources/log4j.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/springcfx/!svn/ver/286/trunk/stock-investor-portfolio-app/src/test/resources/applicationContext.xml
+END
+mail.properties
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/springcfx/!svn/ver/192/trunk/stock-investor-portfolio-app/src/test/resources/mail.properties
+END
+mongoapplicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/springcfx/!svn/ver/286/trunk/stock-investor-portfolio-app/src/test/resources/mongoapplicationContext.xml
+END
